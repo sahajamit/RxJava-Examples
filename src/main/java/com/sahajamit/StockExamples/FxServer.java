@@ -5,13 +5,16 @@ import io.reactivex.ObservableEmitter;
 
 public class FxServer {
     public static Observable<Double> getFeed(){
-        return Observable.create(subscriber -> processRequest(subscriber));
+        return Observable.create(emitter -> emit(emitter));
     }
 
-    private static void processRequest(ObservableEmitter<Double> subscriber) {
+    private static void emit(ObservableEmitter<Double> emitter) {
         System.out.println("processing...");
-        while (!subscriber.isDisposed()) {
-            subscriber.onNext(SingX.getPrice());
+        int count  = 0;
+//        while (count++<5) {
+        while (!emitter.isDisposed()) {
+            emitter.onNext(SingX.getPrice());
         }
+        emitter.onComplete();
     }
 }
