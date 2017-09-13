@@ -7,3 +7,5 @@ fromCountryId=59C3BBD2-5D26-4A47-8FC1-2EFA628049CE&
 toCountryId=A5001AED-DDA1-4296-8312-223D383F96F5&
 feeType=0&l
 abel=First
+
+https://www.singx.co/singx/secure/CommonRestServiceImpl/getExchangeRates?fromId=SGD&toId=INR&amount=10000.00&receiveAmt=0&fromCountryId=59C3BBD2-5D26-4A47-8FC1-2EFA628049CE&toCountryId=A5001AED-DDA1-4296-8312-223D383F96F5&feeType=0&label=First
